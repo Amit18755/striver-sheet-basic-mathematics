@@ -1,0 +1,15 @@
+class Solution {
+  public:
+    long long reversedBits(long long X) {
+        // code here
+        long long rev=0;
+        int counter=1;
+        while(counter<=32){
+            int remainder = X%2;
+            rev= rev*2+remainder;
+            X/=2;
+            counter++;
+        }
+        return rev;
+    }
+};
